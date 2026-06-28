@@ -103,4 +103,5 @@ lib/
 ---
 
 **المطور:** وليد النجلات  
-**البريد:** your@email.com
+**البريد:** waleed.alnjlatty@gmail.com  
+**LinkedIn:** [www.linkedin.com/in/waleed-al-najlat-6634a1295](https://www.linkedin.com/in/waleed-al-najlat-6634a1295)
