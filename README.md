@@ -34,10 +34,10 @@
 
 ```bash
 # استنساخ المشروع
-git clone https://github.com/your-username/quran-app.git
+git clone https://github.com/waleednjlaty/AlquraanAlcareemMoblieApplication.git
 
 # الدخول إلى المجلد
-cd quran-app
+cd AlquraanAlcareemMoblieApplication
 
 # تثبيت الاعتماديات
 flutter pub get
