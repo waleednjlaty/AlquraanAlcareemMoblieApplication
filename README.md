@@ -102,6 +102,12 @@ lib/
 
 ---
 
+## 🎬 عرض التطبيق
+
+[شاهد عرض التطبيق على يوتيوب](https://youtube.com/shorts/4Pa6Wt3sGdw)
+
+---
+
 **المطور:** وليد النجلات  
 **البريد:** waleed.alnjlatty@gmail.com  
 **LinkedIn:** [www.linkedin.com/in/waleed-al-najlat-6634a1295](https://www.linkedin.com/in/waleed-al-najlat-6634a1295)
