@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -554,7 +555,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         context,
                         icon: Icons.email_outlined,
                         label: 'تواصل',
-                        url: 'waleed.njlatty@email.com',
+                        url: 'mailto:waleed.njlatty@gmail.com',
                       ),
                     ],
                   ),
@@ -605,31 +606,71 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   child: Column(
                     children: [
                       GestureDetector(
-                        onTap: () => _launchUrl('https://paypal.me/'),
+                        onTap: () {
+                          Clipboard.setData(
+                            const ClipboardData(
+                              text: 'waleedfacebook12@gmail.com',
+                            ),
+                          );
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('✅ تم نسخ الإيميل'),
+                              duration: Duration(seconds: 2),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: double.infinity,
-                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 12,
+                            horizontal: 12,
+                          ),
                           decoration: BoxDecoration(
                             color: AC.gold(context).withValues(alpha: 0.08),
                             border: Border.all(color: AC.borderMid(context)),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                          child: Column(
                             children: [
                               Text(
                                 'PayPal',
                                 style: TextStyle(
                                   color: AC.gold(context),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              const SizedBox(width: 8),
-                              Icon(
-                                Icons.account_balance_wallet_outlined,
-                                color: AC.gold(context),
-                                size: 18,
+                              const SizedBox(height: 6),
+                              Directionality(
+                                textDirection: TextDirection.ltr,
+                                child: Text(
+                                  'waleedfacebook12@gmail.com',
+                                  style: TextStyle(
+                                    color: AC.text(context),
+                                    fontSize: 12,
+                                    letterSpacing: 0.5,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                              const SizedBox(height: 6),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.copy_rounded,
+                                    color: AC.gold(context),
+                                    size: 14,
+                                  ),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    'اضغط للنسخ',
+                                    style: TextStyle(
+                                      color: AC.gold(context),
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -637,32 +678,71 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ),
                       const SizedBox(height: 8),
                       GestureDetector(
-                        onTap: () =>
-                            _launchUrl('https://www.binance.com/en/pay'),
+                        onTap: () {
+                          Clipboard.setData(
+                            const ClipboardData(
+                              text: 'TD3S1HrR43vneeLZSTQJvomEEfxNsnvZDh',
+                            ),
+                          );
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('✅ تم نسخ العنوان'),
+                              duration: Duration(seconds: 2),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: double.infinity,
-                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 12,
+                            horizontal: 12,
+                          ),
                           decoration: BoxDecoration(
                             color: AC.gold(context).withValues(alpha: 0.08),
                             border: Border.all(color: AC.borderMid(context)),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                          child: Column(
                             children: [
                               Text(
-                                'Binance Pay',
+                                'USDT (TRC20)',
                                 style: TextStyle(
                                   color: AC.gold(context),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              const SizedBox(width: 8),
-                              Icon(
-                                Icons.currency_bitcoin_outlined,
-                                color: AC.gold(context),
-                                size: 18,
+                              const SizedBox(height: 6),
+                              Directionality(
+                                textDirection: TextDirection.ltr,
+                                child: Text(
+                                  'TD3S1HrR43vneeLZSTQJvomEEfxNsnvZDh',
+                                  style: TextStyle(
+                                    color: AC.text(context),
+                                    fontSize: 12,
+                                    letterSpacing: 0.5,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                              const SizedBox(height: 6),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.copy_rounded,
+                                    color: AC.gold(context),
+                                    size: 14,
+                                  ),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    'اضغط للنسخ',
+                                    style: TextStyle(
+                                      color: AC.gold(context),
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
